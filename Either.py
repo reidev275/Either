@@ -21,7 +21,7 @@ class Either(object):
      if self.is_right:
        return binding(self.value)
      else:
-       return Either(self.value, False)
+       return Either.left(self.value)
        
    def __str__(self):
      if self.is_right:
