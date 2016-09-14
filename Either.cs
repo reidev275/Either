@@ -17,10 +17,10 @@ class Either<Right, Left>
       
   public Either<T, Left> Map<T>(Func<Right, T> mapping)
   {
-    if (RightisRight)
+    if (isRight)
     {
       var result = mapping(right);
-      return new Either<T, Leftft>(result);
+      return new Either<T, Left>(result);
     }
     return new Either<T, Left>(left);
   }
