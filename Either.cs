@@ -43,11 +43,11 @@ var five = new Either<int, string>(2)
   .ToString();
 //Right(5)
 
-Either<int, string> Divide(int numerator, int denomenator)
+Either<int, string> Divide(int numerator, int denominator)
 {
-  return denomenator == 0
+  return denominator == 0
     ? new Either<int, string>("cannot divide by 0")
-    : new Either<int, string>(num / den);
+    : new Either<int, string>(numerator / denominator);
 }
 
 var divByZero = new Either<int, string>(10)
